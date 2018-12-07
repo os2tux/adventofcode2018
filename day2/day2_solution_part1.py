@@ -41,8 +41,8 @@ def find_counts():
         ccounts.append(inspection)
 
 #Here we can assume that if a string has both a duplicate and a triplicate value, it needs
-#to be sent to both destinations. Else if only has a duplicate, it need only be sent to one
-#destination 
+#to be sent to both destinations. Else if it only has a duplicate, it need only be sent to 
+#one destination 
     for d in ccounts:
         for k in d:
             if 2 in d[k].values() and 3 in d[k].values():
