@@ -12,16 +12,12 @@ def retrieve_boxIDs(filepath):
 
     return boxID_list
 
-#This solution assumes that there are two states in which a string can exist, based on the
-#the problem statement. It can either have 0 or multiple duplicates. If multiple duplicates
-#exist, we must determine if they are a duplicate of two or of three, which determines how
-#we process the data. The first component of our function inspects the string to determine
-#what its state is. Once this state is known, we then evaluate that state to
-#determine how we should process the string (to which destination it should be sent). 
-#Because each state need only occur once for the string classification process, we can 
-#assume that ANY existence of a given attribute is enough to classify the string. Thus in 
-#the second component of the function, we evaluate the attributes of each string 
-#individually to determine the state of its duplicates, and process it accordingly 
+#This solution assumes that there are three states in which a string can exist, based on the
+#the problem statement. It can either have nothing, duplicates, or triplicates. If triplicates or duplicates exist, we must process the data differently. The first component of our function inspects the string to determine what its state is. Once this state is known, we then 
+#evaluate that state to determine how we should process the string (to which destination it 
+#should be sent). Because each state need only occur once for the string classification 
+#process, we can assume that ANY existence of a given attribute is enough to classify the string. Thus in the second component of the function, we evaluate the attributes of each 
+#string individually to determine the state of its duplicates, and process it accordingly 
 def find_counts():
     box_ids = retrieve_boxIDs(filepath)
     ccounts = []
